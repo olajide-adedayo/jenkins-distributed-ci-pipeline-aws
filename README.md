@@ -505,19 +505,19 @@ This project demonstrates a complete end-to-end CI pipeline implementation using
 
 ### Jenkins CI Pipeline (Core Build)
 
-![WAR Artifact Output](./01-jenkins-ci-pipeline-war-artifact.png)  
-![Build Summary](./02-jenkins-ci-pipeline-build-summary.png)  
-![Build Logs](./03-jenkins-ci-pipeline-build-logs.png)  
-![Job Configuration](./04-jenkins-ci-pipeline-job-configuration.png)  
+![WAR Artifact Output](screenshots/01-jenkins-ci-pipeline-war-artifact.png)  
+![Build Summary](screenshots/02-jenkins-ci-pipeline-build-summary.png)  
+![Build Logs](screenshots/03-jenkins-ci-pipeline-build-logs.png)  
+![Job Configuration](screenshots/04-jenkins-ci-pipeline-job-configuration.png)  
 
 ---
 
 ### Jenkins Distributed Build (Agent Execution)
 
-![Agent Online Status](./05-jenkins-agent-online-status.png)  
-![Remote Build Execution](./06-jenkins-remote-build-execution.png)  
-![Agent Build Process](./07-jenkins-agent-build-process.png)  
-![Artifact Generation](./08-jenkins-agent-war-artifact-generation.png)
+![Agent Online Status](screenshots/05-jenkins-agent-online-status.png)  
+![Remote Build Execution](screenshots/06-jenkins-remote-build-execution.png)  
+![Agent Build Process](screenshots/07-jenkins-agent-build-process.png)  
+![Artifact Generation](screenshots/08-jenkins-agent-war-artifact-generation.png)
 
 ---
 
