@@ -55,3 +55,61 @@ To design and implement an automated Continuous Integration (CI) pipeline that:
 - Configured as Jenkins Build Agent
 - Connected via SSH to Jenkins Controller
 - Assigned Label: MAVEN-BUILDER
+
+
+## ⚙️ Jenkins Configuration
+
+### Installed Tools in Jenkins
+
+- JDK: OpenJDK 21 configured in Global Tool Configuration  
+- Maven: Maven 3.9.x configured for build automation  
+- Git: Installed on Jenkins Controller for source code retrieval  
+- SSH Client: Used internally by Jenkins for agent connectivity via SSH  
+
+---
+
+### Jenkins Node Configuration (Agent Setup)
+
+- Node Name: MAVEN-BUILDER  
+- Remote Root Directory: /opt/jenkins  
+- Launch Method: SSH (Launch agents via SSH)  
+- Credentials: SSH Username with Private Key (ubuntu user)  
+- Host Key Verification Strategy: Non-verifying strategy  
+- Label: MAVEN-BUILDER  
+- Number of Executors: 1 (controlled resource usage for build stability)  
+
+---
+
+### AWS EC2 Infrastructure Supporting Jenkins
+
+#### Jenkins Controller Server
+- Ubuntu Linux (EC2 Instance)  
+- Jenkins Installed and Running  
+- Git Installed  
+- Java (OpenJDK 21) Installed  
+
+#### Jenkins Build Agent (Maven Agent)
+- Ubuntu Linux (EC2 Instance)  
+- OpenJDK 21 Installed  
+- Remote workspace configured at /opt/jenkins  
+- Connected to Jenkins Controller via SSH  
+
+---
+
+### Job Configuration
+
+- Source Code Management: GitHub integration  
+- Repository URL: https://github.com/HKHcoder/vprofile-project.git  
+- Build Trigger: Manual execution  
+- Build Tool: Maven  
+- Build Goal: mvn install  
+- Execution Mode: Restricted to MAVEN-BUILDER node (Distributed Build Architecture)  
+- Artifact Generated: WAR file (vprofile-v2.war)  
+
+---
+
+### Build Output
+
+- Artifact Location: target/vprofile-v2.war  
+- Build Status: SUCCESS  
+- Artifact Archiving: Enabled in Jenkins
