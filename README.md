@@ -38,3 +38,20 @@ To design and implement an automated Continuous Integration (CI) pipeline that:
 - Java OpenJDK 21 (Application Runtime)
 - SSH (Secure Remote Communication)
 - Maven Central Repository (Dependency Management)
+
+
+## ☁️ AWS Infrastructure
+
+### Jenkins Controller Server
+- AWS EC2 Instance
+- Ubuntu Linux
+- Jenkins Installed and Configured
+- Git & Maven Integration Enabled
+
+### Jenkins Agent Server (Maven Builder)
+- AWS EC2 Instance
+- Ubuntu Linux
+- OpenJDK 21 Installed
+- Configured as Jenkins Build Agent
+- Connected via SSH to Jenkins Controller
+- Assigned Label: MAVEN-BUILDER
