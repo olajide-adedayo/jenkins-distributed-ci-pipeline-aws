@@ -113,3 +113,53 @@ To design and implement an automated Continuous Integration (CI) pipeline that:
 - Artifact Location: target/vprofile-v2.war  
 - Build Status: SUCCESS  
 - Artifact Archiving: Enabled in Jenkins
+
+
+## 🔄 Continuous Integration (CI) Pipeline Workflow
+
+The CI pipeline was implemented using Jenkins to automate the full build lifecycle of a Java web application hosted on GitHub.
+
+---
+
+### Pipeline Flow
+
+1. Developer commits and pushes code to GitHub repository  
+2. Jenkins job is triggered manually (configured for CI execution)  
+3. Jenkins pulls the latest source code from the GitHub repository  
+4. Maven resolves all project dependencies from Maven Central Repository  
+5. Source code is compiled into bytecode  
+6. Automated unit tests are executed using Maven Surefire plugin  
+7. Application is packaged into a WAR file (web application artifact)  
+8. Jenkins archives the generated artifact for future use  
+9. Build is executed on a dedicated Jenkins Agent (MAVEN-BUILDER node) instead of the controller  
+10. Build status is reported back to the Jenkins dashboard  
+
+---
+
+### Maven Build Lifecycle Executed
+
+The following Maven phases were executed during the pipeline:
+
+```text
+clean → validate → compile → test → package → install
+
+Maven Command Used
+
+mvn clean install
+
+Output Generated
+
+. Artifact : vprofile-v2.war
+. Location : target/vprofile-v2.war
+. Build Status : SUCCESS
+. Artifact Archiving : Enabled via Jenkins post-build actions
+
+Key Note
+
+This CI pipeline demonstrates a distributed build execution model, where Jenkins offload build processing to a dedicated agent (MAVEN-BUILDER).
+
+This improves:
+
+. Build scalability
+. Performance efficiency
+. Separation of concerns between Controller and Agent
