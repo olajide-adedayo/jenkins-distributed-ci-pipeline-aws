@@ -1,0 +1,1 @@
+Screenshots folder for jenkins Distributed CI Pipeline project.
