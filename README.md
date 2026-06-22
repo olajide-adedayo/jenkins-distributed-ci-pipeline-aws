@@ -149,10 +149,10 @@ mvn clean install
 
 Output Generated
 
-. Artifact : vprofile-v2.war
-. Location : target/vprofile-v2.war
-. Build Status : SUCCESS
-. Artifact Archiving : Enabled via Jenkins post-build actions
+. Artifact: vprofile-v2.war
+. Location: target/vprofile-v2.war
+. Build Status: SUCCESS
+. Artifact Archiving: Enabled via Jenkins post-build actions
 
 Key Note
 
