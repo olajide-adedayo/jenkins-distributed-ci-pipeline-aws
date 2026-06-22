@@ -25,3 +25,16 @@ To design and implement an automated Continuous Integration (CI) pipeline that:
 - Generates deployable WAR artifacts
 - Implements distributed build execution using Jenkins Agent architecture
 - Demonstrates scalable, production-like CI/CD workflow on AWS infrastructure
+
+
+## 🛠️ Technologies Used
+
+- Jenkins (CI/CD Automation Server)
+- AWS EC2 (Cloud Infrastructure)
+- Ubuntu Linux (Operating System)
+- Git (Version Control System)
+- GitHub (Source Code Repository)
+- Maven (Build Automation Tool)
+- Java OpenJDK 21 (Application Runtime)
+- SSH (Secure Remote Communication)
+- Maven Central Repository (Dependency Management)
