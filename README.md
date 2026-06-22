@@ -499,3 +499,35 @@ This project demonstrates a complete end-to-end CI pipeline implementation using
 - Linux system administration  
 - SSH authentication and secure communication  
 - Distributed build architecture design
+
+
+## 📸 Screenshots
+
+The following screenshots provide visual proof of the Jenkins CI pipeline implementation and distributed build architecture.
+
+---
+
+### Jenkins CI Pipeline (Core Build)
+
+- 01 - Jenkins CI Pipeline - WAR Artifact Output  
+- 02 - Jenkins CI Pipeline - Build Summary  
+- 03 - Jenkins CI Pipeline - Build Execution Logs  
+- 04 - Jenkins CI Pipeline - Job Configuration  
+
+---
+
+### Jenkins Distributed Build (Agent Execution)
+
+- 05 - Jenkins Agent - MAVEN-BUILDER Online Status  
+- 06 - Jenkins Remote Build Execution  
+- 07 - Jenkins Agent - Build Process (Maven Execution)  
+- 08 - Jenkins Agent - WAR Artifact Generation  
+
+---
+
+### Verification Notes
+
+- All builds executed successfully on Jenkins Agent  
+- Artifact generation confirmed via Jenkins console output  
+- Distributed architecture validated through node label execution  
+- SSH-based communication between Controller and Agent verified
