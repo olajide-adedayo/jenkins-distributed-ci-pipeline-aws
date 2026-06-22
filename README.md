@@ -140,30 +140,34 @@ The CI pipeline was implemented using Jenkins to automate the full build lifecyc
 
 The following Maven phases were executed during the pipeline:
 
-```text
+text
 clean → validate → compile → test → package → install
 
-Maven Command Used
 
+### Maven Command Used
+
+bash
 mvn clean install
 
-Output Generated
 
-. Artifact: vprofile-v2.war
-. Location: target/vprofile-v2.war
-. Build Status: SUCCESS
-. Artifact Archiving: Enabled via Jenkins post-build actions
+### Output Generated
 
-Key Note
+- Artifact: vprofile-v2.war
+- Location: target/vprofile-v2.war
+- Build Status: SUCCESS
+- Artifact Archiving: Enabled via Jenkins post-build actions
 
-This CI pipeline demonstrates a distributed build execution model, where Jenkins offload build processing to a dedicated agent (MAVEN-BUILDER).
+### Key Note
+
+This CI pipeline demonstrates a *distributed build execution model*, where Jenkins offloads build processing to a dedicated agent (MAVEN-BUILDER).
 
 This improves:
 
-. Build scalability
-. Performance efficiency
-. Separation of concerns between Controller and Agent
+- Build scalability
+- Performance efficiency
+- Separation of concerns between Controller and Agent
 
+---
 
 ## 🏗️ Distributed Build Architecture
 
@@ -173,54 +177,58 @@ This project implements a *Jenkins Distributed Build Architecture* to improve sc
 
 ### Architecture Overview
 
-- Jenkins Controller is responsible for:
-  - Job scheduling
-  - Source code management integration
-  - Build orchestration
+#### Jenkins Controller Responsibilities
 
-- Jenkins Agent (MAVEN-BUILDER) is responsible for:
-  - Executing Maven build jobs
-  - Compiling source code
-  - Running tests
-  - Generating WAR artifacts
+- Job scheduling
+- Source code management integration
+- Build orchestration
+- Agent management
+
+#### Jenkins Agent (MAVEN-BUILDER) Responsibilities
+
+- Executing Maven build jobs
+- Compiling source code
+- Running automated tests
+- Generating WAR artifacts
 
 ---
 
 ### Execution Flow
 
-GitHub Repository  
-        │  
-        ▼  
-Jenkins Controller (AWS EC2)  
-        │  SSH Connection  
-        ▼  
-Jenkins Agent (AWS EC2 - MAVEN-BUILDER)  
-        │  
-        ▼  
-Maven Build Execution  
-        │  
-        ▼  
-WAR Artifact Generation  
-        │  
-        ▼  
-Artifact Archiving in Jenkins  
+text
+GitHub Repository
+        │
+        ▼
+Jenkins Controller (AWS EC2)
+        │
+        │ SSH Connection
+        ▼
+Jenkins Agent (AWS EC2 - MAVEN-BUILDER)
+        │
+        ▼
+Maven Build Execution
+        │
+        ▼
+WAR Artifact Generation
+        │
+        ▼
+Artifact Archiving in Jenkins
 
----
 
 ### Key Configuration
 
-- Agent Label: MAVEN-BUILDER  
-- Remote Root Directory: /opt/jenkins  
-- Launch Method: SSH  
-- Execution Mode: Restricted to agent node  
-- Build Execution: Offloaded from Controller to Agent  
+- Agent Label: MAVEN-BUILDER
+- Remote Root Directory: /opt/jenkins
+- Launch Method: SSH
+- Execution Mode: Restricted to agent node
+- Build Execution: Offloaded from Controller to Agent
 
 ---
 
 ### Benefits of This Architecture
 
-- Improved build performance by offloading workload from controller  
-- Better scalability for future multiple agents  
-- Cleaner separation of CI responsibilities  
-- Simulates real-world enterprise CI/CD environments  
-- Reduced load on Jenkins master server
+- Improved build performance by offloading workload from the controller
+- Better scalability for future agent expansion
+- Clear separation of responsibilities between Controller and Agent
+- Simulates real-world enterprise CI/CD environments
+- Reduced resource utilization on the Jenkins Controller
