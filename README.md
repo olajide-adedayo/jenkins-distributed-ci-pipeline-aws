@@ -503,39 +503,21 @@ This project demonstrates a complete end-to-end CI pipeline implementation using
 
 ## 📸 Screenshots
 
-The following screenshots provide visual proof of the Jenkins CI pipeline implementation and distributed build architecture.
-
----
-
 ### Jenkins CI Pipeline (Core Build)
 
-#### 1. Build Artifact Output
-![Jenkins CI Pipeline - WAR Artifact Output](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/01-jenkins-ci-pipeline-war-artifact.png?raw=true)
-
-#### 2. Build Summary
-![Jenkins CI Pipeline - Build Summary](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/02-jenkins-ci-pipeline-build-summary.png?raw=true)
-
-#### 3. Build Execution Logs
-![Jenkins CI Pipeline - Build Logs](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/03-jenkins-ci-pipeline-build-logs.png?raw=true)
-
-#### 4. Job Configuration
-![Jenkins CI Pipeline - Job Configuration](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/04-jenkins-ci-pipeline-job-configuration.png?raw=true)
+![WAR Artifact Output](./01-jenkins-ci-pipeline-war-artifact.png)  
+![Build Summary](./02-jenkins-ci-pipeline-build-summary.png)  
+![Build Logs](./03-jenkins-ci-pipeline-build-logs.png)  
+![Job Configuration](./04-jenkins-ci-pipeline-job-configuration.png)  
 
 ---
 
 ### Jenkins Distributed Build (Agent Execution)
 
-#### 5. Agent Online Status
-![Jenkins Agent Online Status](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/05-jenkins-agent-online-status.png?raw=true)
-
-#### 6. Remote Build Execution
-![Jenkins Remote Build Execution](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/06-jenkins-remote-build-execution.png?raw=true)
-
-#### 7. Agent Build Process
-![Jenkins Agent Build Process](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/07-jenkins-agent-build-process.png?raw=true)
-
-#### 8. Artifact Generation on Agent
-![Jenkins Agent WAR Artifact Generation](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/08%20-%20jenkins-agent-war-artifact-generation.png?raw=true)
+![Agent Online Status](./05-jenkins-agent-online-status.png)  
+![Remote Build Execution](./06-jenkins-remote-build-execution.png)  
+![Agent Build Process](./07-jenkins-agent-build-process.png)  
+![Artifact Generation](./08-jenkins-agent-war-artifact-generation.png)
 
 ---
 
