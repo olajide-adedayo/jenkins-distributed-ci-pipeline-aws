@@ -339,3 +339,33 @@ which mvn
 - Validate Maven and Git installations
 - Verify software installation paths
 - Ensure the Jenkins Agent is ready for distributed build execution
+
+
+## 📦 Artifact Generation
+
+The CI pipeline generates a deployable *WAR (Web Application Archive)* file as the final build output.
+
+### Build Process Output
+
+- Application Type: Java Web Application  
+- Build Tool: Maven  
+- Packaging Format: WAR  
+
+### Generated Artifact
+
+text
+vprofile-v2.war
+
+
+### Artifact Location
+
+text
+target/vprofile-v2.war
+
+
+### Jenkins Artifact Handling
+
+- Artifact is automatically generated after successful Maven build  
+- Stored in Jenkins workspace on the build agent  
+- Archived in Jenkins for future deployment or download  
+- Verified through Jenkins Build History console output
