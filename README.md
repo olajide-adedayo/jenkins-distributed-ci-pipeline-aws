@@ -163,3 +163,64 @@ This improves:
 . Build scalability
 . Performance efficiency
 . Separation of concerns between Controller and Agent
+
+
+## 🏗️ Distributed Build Architecture
+
+This project implements a *Jenkins Distributed Build Architecture* to improve scalability, performance, and separation of responsibilities between the Jenkins Controller and Build Agent.
+
+---
+
+### Architecture Overview
+
+- Jenkins Controller is responsible for:
+  - Job scheduling
+  - Source code management integration
+  - Build orchestration
+
+- Jenkins Agent (MAVEN-BUILDER) is responsible for:
+  - Executing Maven build jobs
+  - Compiling source code
+  - Running tests
+  - Generating WAR artifacts
+
+---
+
+### Execution Flow
+
+GitHub Repository  
+        │  
+        ▼  
+Jenkins Controller (AWS EC2)  
+        │  SSH Connection  
+        ▼  
+Jenkins Agent (AWS EC2 - MAVEN-BUILDER)  
+        │  
+        ▼  
+Maven Build Execution  
+        │  
+        ▼  
+WAR Artifact Generation  
+        │  
+        ▼  
+Artifact Archiving in Jenkins  
+
+---
+
+### Key Configuration
+
+- Agent Label: MAVEN-BUILDER  
+- Remote Root Directory: /opt/jenkins  
+- Launch Method: SSH  
+- Execution Mode: Restricted to agent node  
+- Build Execution: Offloaded from Controller to Agent  
+
+---
+
+### Benefits of This Architecture
+
+- Improved build performance by offloading workload from controller  
+- Better scalability for future multiple agents  
+- Cleaner separation of CI responsibilities  
+- Simulates real-world enterprise CI/CD environments  
+- Reduced load on Jenkins master server
