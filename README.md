@@ -509,19 +509,33 @@ The following screenshots provide visual proof of the Jenkins CI pipeline implem
 
 ### Jenkins CI Pipeline (Core Build)
 
-- 01 - Jenkins CI Pipeline - WAR Artifact Output  
-- 02 - Jenkins CI Pipeline - Build Summary  
-- 03 - Jenkins CI Pipeline - Build Execution Logs  
-- 04 - Jenkins CI Pipeline - Job Configuration  
+#### 1. Build Artifact Output
+![Jenkins CI Pipeline - WAR Artifact Output](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/01%20-%20Jenkins-ci-pipeline-war-artifact.png?raw=true)
+
+#### 2. Build Summary
+![Jenkins CI Pipeline - Build Summary](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/02%20-%20jenkins-ci-pipeline-build-summary.png?raw=true)
+
+#### 3. Build Execution Logs
+![Jenkins CI Pipeline - Build Logs](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/03%20-%20jenkins-ci-pipeline-build-logs.png?raw=true)
+
+#### 4. Job Configuration
+![Jenkins CI Pipeline - Job Configuration](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/04%20-%20jenkins-ci-pipeline-job-configuration.png?raw=true)
 
 ---
 
 ### Jenkins Distributed Build (Agent Execution)
 
-- 05 - Jenkins Agent - MAVEN-BUILDER Online Status  
-- 06 - Jenkins Remote Build Execution  
-- 07 - Jenkins Agent - Build Process (Maven Execution)  
-- 08 - Jenkins Agent - WAR Artifact Generation  
+#### 5. Agent Online Status
+![Jenkins Agent Online Status](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/05%20-%20jenkins-agent-online-status.png?raw=true)
+
+#### 6. Remote Build Execution
+![Jenkins Remote Build Execution](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/06%20-%20jenkins-remote-build-execution.png?raw=true)
+
+#### 7. Agent Build Process
+![Jenkins Agent Build Process](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/07%20-%20jenkins-agent-build-process.png?raw=true)
+
+#### 8. Artifact Generation on Agent
+![Jenkins Agent WAR Artifact Generation](https://github.com/olajide-adedayo/jenkins-distributed-ci-pipeline-aws/blob/main/08%20-%20jenkins-agent-war-artifact-generation.png?raw=true)
 
 ---
 
