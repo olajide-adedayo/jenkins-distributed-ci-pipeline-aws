@@ -232,3 +232,110 @@ Artifact Archiving in Jenkins
 - Clear separation of responsibilities between Controller and Agent
 - Simulates real-world enterprise CI/CD environments
 - Reduced resource utilization on the Jenkins Controller
+
+## 🐧 Linux Commands Used
+
+The following Linux commands were used while preparing, verifying, and managing the Jenkins Build Agent environment.
+
+### Update Package Repository
+
+bash
+sudo apt update
+
+
+### Install Java 21
+
+bash
+sudo apt install openjdk-21-jdk -y
+
+
+### Verify Java Installation
+
+bash
+java -version
+
+
+### Create Jenkins Working Directory
+
+bash
+sudo mkdir -p /opt/jenkins
+
+
+### Assign Directory Ownership
+
+bash
+sudo chown ubuntu:ubuntu /opt/jenkins
+
+
+### Verify Directory Permissions
+
+bash
+ls -ld /opt/jenkins
+
+
+### Verify Current Logged-in User
+
+bash
+whoami
+
+
+### Verify Current Working Directory
+
+bash
+pwd
+
+
+### Display Logged-in Users and System Activity
+
+bash
+w
+
+
+### Display User and Group Information
+
+bash
+id
+
+
+### Verify SSH Connectivity from Jenkins Controller to Agent (Manual Validation)
+
+bash
+ssh -i <private-key>.pem ubuntu@<Agent-Public-IP>
+
+
+### Verify Maven Installation
+
+bash
+mvn -version
+
+
+### Verify Git Installation
+
+bash
+git --version
+
+
+### Verify Java Installation Path
+
+bash
+which java
+
+
+### Verify Maven Installation Path
+
+bash
+which mvn
+
+
+### Purpose of These Commands
+
+- Update the Ubuntu package repository
+- Install and verify OpenJDK 21
+- Prepare the Jenkins Agent build environment
+- Create a dedicated Jenkins workspace directory
+- Configure proper ownership and permissions
+- Verify user identity and system information
+- Confirm SSH connectivity between Jenkins Controller and Agent
+- Validate Maven and Git installations
+- Verify software installation paths
+- Ensure the Jenkins Agent is ready for distributed build execution
