@@ -369,3 +369,92 @@ target/vprofile-v2.war
 - Stored in Jenkins workspace on the build agent  
 - Archived in Jenkins for future deployment or download  
 - Verified through Jenkins Build History console output
+
+
+## 🚧 Challenges Encountered & Troubleshooting
+
+During the implementation of this CI pipeline, several challenges were encountered and resolved as part of real-world DevOps troubleshooting experience.
+
+---
+
+### 1. Jenkins Agent Credential Issue
+
+*Problem:*
+SSH credentials for the Jenkins agent were not appearing in the Jenkins node configuration dropdown.
+
+*Cause:*
+Credentials were not correctly scoped under Global Credentials Store.
+
+*Solution:*
+- Re-created SSH credentials using "SSH Username with Private Key"
+- Ensured username was set to ubuntu
+- Saved credentials in Global scope
+- Re-selected credentials in Jenkins node configuration
+
+---
+
+### 2. Jenkins Agent Connection Failure
+
+*Problem:*
+Jenkins was unable to establish SSH connection to the EC2 agent.
+
+*Cause:*
+Security group did not allow inbound SSH (port 22) from Jenkins controller.
+
+*Solution:*
+- Updated AWS Security Group rules
+- Allowed SSH (port 22) from Jenkins controller IP
+- Reconnected Jenkins agent successfully
+
+---
+
+### 3. Maven Build Failure Due to Java Version
+
+*Problem:*
+Maven build failed initially on the agent node.
+
+*Cause:*
+Incorrect or missing Java installation on the agent.
+
+*Solution:*
+- Installed OpenJDK 21
+- Verified with java -version
+- Reconfigured JAVA_HOME if required
+
+---
+
+### 4. Build Running on Controller Instead of Agent
+
+*Problem:*
+Jenkins job was executing on the controller instead of the agent.
+
+*Cause:*
+No label restriction applied to job configuration.
+
+*Solution:*
+- Configured node label: MAVEN-BUILDER
+- Enabled "Restrict where this project can be run"
+- Ensured execution on agent only
+
+---
+
+### 5. Maven Dependency Download Delay
+
+*Problem:*
+Initial builds took longer due to dependency downloads.
+
+*Solution:*
+- Maven cache populated after first successful build
+- Subsequent builds executed faster
+
+---
+
+### Key Learning
+
+These challenges helped reinforce real-world DevOps skills in:
+
+- Jenkins distributed architecture
+- AWS EC2 configuration
+- Linux server troubleshooting
+- Maven build lifecycle management
+- CI/CD pipeline debugging
